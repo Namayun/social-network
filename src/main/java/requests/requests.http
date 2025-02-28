@@ -1,0 +1,96 @@
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "namayun",
+  "password": "Qwerty1@",
+  "email": "example@mail.com"
+}
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "Arsen",
+  "password": "Qwerty1@",
+  "email": "example5@mail.com"
+}
+
+
+###
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "ragepack",
+  "password": "Qwerty1@",
+  "email": "example3@mail.com"
+}
+
+
+
+###
+POST http://localhost:8080/api/users/update-profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYW1heXVuIiwiaWF0IjoxNzM5NDM0NDkwLCJleHAiOjE3Mzk0MzgwOTB9.dntNg-EyQIE5zDJd_aCNthMHTEP-O5T3RltUIuv47z0
+
+{
+  "city": "Bishkek",
+  "country": "Kyrgyzstan",
+  "firstName": "Igor",
+  "lastName": "Solodovnikov",
+  "birthDate": "1996-08-16"
+
+}
+
+
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "password": "Qwerty1@",
+  "username": "arsen"
+}
+
+###
+POST http://localhost:8080/api/posts/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYW1heXVuIiwiaWF0IjoxNzM5OTg1NDcwLCJleHAiOjE3Mzk5ODkwNzB9.zgk8LN52SVJdSWJDji-fWFTZ_iQJytlHpyXy93onoVY
+
+
+{
+  "content": "Hello guys"
+}
+
+
+###
+POST localhost:8080/api/friendships/send-request?login=arsen
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnNlbiIsImlhdCI6MTc0MDA2MjYyMCwiZXhwIjoxNzQwMDY2MjIwfQ.7kZchdXYNpyPKTZSgGlQ64YThpl-97q0rTVZN8RoqNM
+
+###
+
+GET localhost:8080/api/friendships/requests
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnNlbiIsImlhdCI6MTc0MDA2MjQzNSwiZXhwIjoxNzQwMDY2MDM1fQ.IYC4w5DZlwZ3vrfLo2QU8X10W7S2sVvmR4IrKL-m3_M
+
+
+###
+
+POST http://localhost:8080/api/friendships/accept?login=namayun
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJheml6IiwiaWF0IjoxNzQwMDYxODU4LCJleHAiOjE3NDAwNjU0NTh9.ExLfXscxOVVUyue7TySZws8k8tPgEhDqPNbFzEhzVKw
+
+
+###
+POST http://localhost:8080/api/friendships/decline?login=arsen
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnNlbiIsImlhdCI6MTc0MDA2MzIzNCwiZXhwIjoxNzQwMDY2ODM0fQ.tmDVcds1nASP_1w9ITf1lbC_H3V4PSHsBwd8f4lH2wQ
+
+###
+
+GET http://localhost:8080/api/friendships/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhcnNlbiIsImlhdCI6MTc0MDA2MjYyMCwiZXhwIjoxNzQwMDY2MjIwfQ.7kZchdXYNpyPKTZSgGlQ64YThpl-97q0rTVZN8RoqNM
+
